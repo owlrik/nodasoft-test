@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 320px;
+  overflow-y: auto;
+  font-size: inherit;
+  line-height: 1.29;
+  color: $color-text;
+  text-align: center;
+  letter-spacing: 0.05em;
+  background-color: $color-body;
+
+  &--active {
+    display: block;
+  }
+}
+
+.modal__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $color-body;
+}
+
+.modal__close {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 1px;
+    background-color: $color-default-black;
+    transform-origin: 50% 50%;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate3d(0, 0, 1, 50deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate3d(0, 0, 1, -50deg);
+  }
+}

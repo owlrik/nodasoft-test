@@ -1,0 +1,32 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrapper .page-header,
+.wrapper .page-footer {
+  flex-shrink: 0;
+}
+
+.wrapper main {
+  flex-grow: 1;
+}
