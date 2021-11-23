@@ -1,2 +1,3 @@
-src/scss/vendor/
-src/scss/style.scss
+src/sass/vendor/
+src/sass/style.scss
+src/sass/variables.scss

@@ -3,7 +3,7 @@ const plumber = require('gulp-plumber');
 const changed = require('gulp-changed');
 const gulpIf = require('gulp-if');
 const htmlmin = require('gulp-htmlmin');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const csso = require('gulp-csso');
@@ -45,7 +45,7 @@ const buildStyles = () => {
     .pipe(plumber())
     .pipe(sass({
       includePaths: ['node_modules']
-    }))
+    }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({
         grid: 'no-autoplace'

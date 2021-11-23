@@ -44,6 +44,7 @@ textarea {
   resize: none;
 }
 
+/* stylelint-disable no-descending-specificity */
 // firefox placeholder \ invalid fix + ios borders
 input,
 textarea {
@@ -88,7 +89,7 @@ input[type="number"]::-webkit-inner-spin-button {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
+input:is([type="email"],
   [type="number"],
   [type="password"],
   [type="search"],
@@ -104,3 +105,4 @@ button,
 [type="submit"] {
   appearance: none;
 }
+/* stylelint-enable no-descending-specificity */
