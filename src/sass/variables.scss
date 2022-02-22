@@ -5,10 +5,7 @@ $color-default-black:             #000000;
 $color-default-white:             #ffffff;
 $color-transparent:               rgba(255, 255, 255, 0);
 
-$color-main:                      #000000;
-$color-accent:                    #0000ff;
-
-$color-text:                      $color-main;
+$color-text:                      $color-default-black;
 $color-text--invert:              $color-default-white;
 
 $color-body:                      $color-default-white;
@@ -16,9 +13,9 @@ $color-body:                      $color-default-white;
 // Typography
 //---------------------------------
 
-$font-family--placeholder:        "", "Arial", sans-serif;
+$font-family--roboto:             "Roboto", "Arial", sans-serif;
 
-$font-size:                       16px;
+$font-size:                       1rem;
 $line-height:                     1.2;
 
 // Viewports

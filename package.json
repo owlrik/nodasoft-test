@@ -1,11 +1,11 @@
 {
-  "name": "markup-basic-template",
+  "name": "nodasoft-test",
   "version": "1.0.0",
-  "description": "Basic template for HTML/CSS/JS pages markup.",
+  "description": "Тестовое задание для компании Nodasoft.",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owlrik/markup-basic-template.git"
+    "url": "git+https://github.com/owlrik/nodasoft-test.git"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp start",
@@ -54,7 +54,7 @@
   "browserslist": [
     "last 2 versions",
     "not dead",
-    "not IE <= 11"
+    "IE 11"
   ],
   "husky": {
     "hooks": {
