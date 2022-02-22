@@ -4,13 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Name</title>
+  <title>Nodasoft Test Task</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Project Name</h1>
+  <div class="wrapper">
+    <header class="page-header">
+      <div class="page-header__inner">
+        <label class="btn page-header__btn" for="modal-open">Open pop-up button</label>
+        <input class="sr-only page-header__toggle" type="radio" name="modal-toggle" id="modal-open">
 
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
+        <div class="modal">
+          <div class="modal__inner">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__content modal-message">
+              <h2 class="modal__title">Pop-up</h2>
+
+              <label class="modal__close" for="modal-close">
+                <span class="sr-only">Close pop-up button</span>
+              </label>
+              <input class="sr-only" type="radio" name="modal-toggle" id="modal-close">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-1">
+        <div class="section-1__block section-1__block--one"></div>
+        <div class="section-1__block section-1__block--two"></div>
+        <div class="section-1__block section-1__block--three"></div>
+        <div class="section-1__block section-1__block--four"></div>
+        <div class="section-1__block section-1__block--five"></div>
+      </section>
+
+      <section class="section-2">
+        <div class="section-2__inner">
+          <div class="section-2__block-wrap">
+            <div class="section-2__block"></div>
+          </div>
+          <div class="section-2__block-wrap">
+            <div class="section-2__block"></div>
+          </div>
+          <div class="section-2__block-wrap">
+            <div class="section-2__block"></div>
+          </div>
+          <div class="section-2__block-wrap">
+            <div class="section-2__block"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer"></footer>
+  </div>
 </body>
 </html>
