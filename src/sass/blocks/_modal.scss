@@ -5,19 +5,20 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  display: none;
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   overflow-y: auto;
   font-size: inherit;
-  line-height: 1.29;
+  line-height: 1.2;
   color: $color-text;
   text-align: center;
-  letter-spacing: 0.05em;
-  background-color: $color-body;
-
-  &--active {
-    display: block;
-  }
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 300ms ease-out,
+    opacity 300ms ease-out;
+  pointer-events: none;
 }
 
 .modal__inner {
@@ -27,7 +28,7 @@
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 20px;
+  padding: 30px;
 }
 
 .modal__overlay {
@@ -36,23 +37,34 @@
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .modal__content {
   position: relative;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-height: 400px;
+  text-align: center;
   background-color: $color-body;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 53px;
 }
 
 .modal__close {
   position: absolute;
-  top: -30px;
-  right: -10px;
-  width: 50px;
-  height: 50px;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 43px;
+  height: 39px;
+  background-color: #7faff6;
+  border-radius: 5px;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -60,17 +72,17 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
+    width: 17px;
     height: 1px;
-    background-color: $color-default-black;
+    background-color: $color-default-white;
     transform-origin: 50% 50%;
   }
 
   &::before {
-    transform: translateX(-50%) rotate3d(0, 0, 1, 50deg);
+    transform: translateX(-50%) rotate3d(0, 0, 1, 55deg);
   }
 
   &::after {
-    transform: translateX(-50%) rotate3d(0, 0, 1, -50deg);
+    transform: translateX(-50%) rotate3d(0, 0, 1, -55deg);
   }
 }

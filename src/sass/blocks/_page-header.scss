@@ -1,0 +1,23 @@
+.page-header {
+  min-height: 100px;
+  margin-bottom: 15px;
+  color: $color-default-white;
+  background-color: #7faff6;
+}
+
+.page-header .btn {
+  color: $color-default-white;
+  background-color: #a5c7f9;
+}
+
+.page-header__inner {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px;
+}
+
+input.page-header__toggle:checked + .modal {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
